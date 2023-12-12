@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: lightseagreen;
+}
+.quote-box{
+    background: #fff;
+    width: 700px;
+    margin: 0px 40px;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.15);
+}
+.quote-box h2{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.quote-box h2::after{
+    content: '';
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgb(23,124,229);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.quote-box blockquote{
+    font-size: 26px;
+    min-height: 110px;
+}
+.quote-box blockquote::before, .quote-box blockquote::after{
+    content: ' " ';
+}
+.quote-box span{
+    display: block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+.quote-box div{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.quote-box button{
+    background: rgb(23,124,229);
+    color: #fff;
+    border-radius: 25px;
+    border: 1px solid rgb(23,124,229);
+    width: 130px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 500px){
+    .quote-box{
+        width: 100%;
+    }
+    .quote-box h2{
+        width: 100%;
+        font-size: 1.6rem;
+    }
+    #quote{
+        width: 100%;
+        font-size: 1rem;
+    }
+    #author{
+        font-weight: bolder;
+    }
+    .quote-box div{
+        margin: 70px 0px 0px 0px;
+    }
+}
